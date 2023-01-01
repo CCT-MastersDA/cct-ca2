@@ -3,9 +3,16 @@ twitter_api.py
 
 This file contains the definition of the classes used to 
 handle the requests to the Twittwer API.
+
+These classes were implemented as a module to avoid code duplicate and for easier reference.
+
+A parent class HttpConnect was created to keep the connection logic separated from the specific requests.
+
+This way, a child class TwitterApi was implemented, which extends from HttpConnect, to handles only Twitter requests.
 """
 # importing modules
 import logging
+import requests
 import json_helper
 
 # use a logger to help debugging
@@ -100,12 +107,12 @@ class TwitterApi(HttpConnect):
             tweets_list (lst): List of retrieved tweets.
         """        
         tweets_list = []
-        if self.run_request(self.TWITTER_API_SEARCH_URL, params):
+        if self.run_request(TWITTER_API_SEARCH_URL, params):
             tweets_list, next_token = self.extract_tweets()
             count=1
 
             if next_token is not None and count < max_pages:
-                url = f'{ self.TWITTER_API_SEARCH_URL }?next_token={next_token}'
+                url = f'{ TWITTER_API_SEARCH_URL }?next_token={next_token}'
                 if self.run_request(url, params):
                     next_tweets_list, next_token = self.extract_tweets()
                     tweets_list+= next_tweets_list

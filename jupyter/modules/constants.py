@@ -8,7 +8,11 @@ They are defined in a separate file to avoid code duplicate and for easier refer
 # importing modules
 import os
 import warnings
+from pathlib import Path
 from os.path import isfile, join, abspath
+
+# path to the users directory
+HOME_DIR = str(Path.home())
 
 # path to the current directory
 CURR_PATH = abspath(os.getcwd())
@@ -21,6 +25,9 @@ IMAGES_FOLDER = join(CURR_PATH, 'images')
 
 # path to output dataset folder
 DATA_PREP_FOLDER = join(DATASETS_FOLDER, 'dataprep')
+
+# path to store collected tweets
+TWEETS_DIR = join(DATASETS_FOLDER, 'tweets-online')
 
 # input/output dataset names
 ORG_FARM_DATASET = 'eurostat-organic-farming.csv'
@@ -36,6 +43,10 @@ FOOD_INF_DATASET = 'fao-food-inflation-eu.csv'
 FOOD_INF_DATASET_AVG = 'fao-food-inflation-eu-avg.csv'
 
 TWEETS_DATASET = 'tapi-agri-tweets.csv'
+TWEETS_DF_FILE = 'tweets_df'
+
+# twitter env file
+TWITTER_ENV_FILE = '.twitter_env'
 
 # images names
 GRAPH_IMP_EXP_QTT = 'imp-exp-qtt-year.png'

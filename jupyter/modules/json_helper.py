@@ -3,6 +3,8 @@ json_helper.py
 
 This file contains the definition of the JSON class,
 which was implemented to handle JSON files in this project.
+
+This class was implemented as a module to avoid code duplicate and for easier reference.
 """
 # importing modules
 import json

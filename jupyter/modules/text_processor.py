@@ -3,11 +3,21 @@ text_processor.py
 
 This file contains the definition of the TextProcessor class,
 which was implemented to handle the text processing for the ML analysis.
+
+This class was implemented as a module to avoid code duplicate and for easier reference.
 """
 # importing modules
 from textblob import TextBlob
 from nltk.stem import PorterStemmer
 from nltk.stem import WordNetLemmatizer
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize
+
+import re
+import string
+
+# list of sentiment labels
+sentiment_lst = ['negative', 'neutral', 'positive']
 
 class TextProcessor:
     """
@@ -29,7 +39,7 @@ class TextProcessor:
         Returns:
             sentiment (str): negative, positive or neutral value.
         """
-        res = TextBlob(text).sentiment.polarity     
+        res = TextBlob(text).sentiment.polarity
         if res < 0:
           return sentiment_lst[0]
         elif res > 0:
@@ -40,7 +50,7 @@ class TextProcessor:
     def process_text(text, use_stemmer=False, use_lemmatizer=False):
         """
         Method responsible to execute all text processing steps.
-        
+
         It converts text to lower case, removes special characters and urls,
         filters out stop words, tokenize and perform stemmer/lemmatizer as per parameters.
 
@@ -62,7 +72,7 @@ class TextProcessor:
             filtered_words = TextProcessor.apply_lemmatizer(filtered_words)
 
         return " ".join(filtered_words)
-    
+
     @staticmethod
     def clean_text(text):
         """
