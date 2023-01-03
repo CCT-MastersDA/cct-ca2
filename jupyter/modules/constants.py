@@ -35,9 +35,9 @@ ORG_FARM_DATASET_IRE = 'eurostat-organic-farming_ire.csv'
 
 IMP_EXP_DATASET = 'fao-import-export-eu.csv'
 IMP_EXP_DATASET_VAL = 'fao-import-export-eu-val.csv'
-IMP_EXP_DATASET_VAL_AVG = 'fao-import-export-eu-val-avg.csv'
 IMP_EXP_DATASET_QTT = 'fao-import-export-eu-qtt.csv'
-IMP_EXP_DATASET_QTT_AVG = 'fao-import-export-eu-qtt-avg.csv'
+IMP_DATASET_AVG = 'fao-import-avg.csv'
+EXP_DATASET_AVG = 'fao-export-avg.csv'
 IMP_EXP_DATASET_TOP10_QTT = 'fao-import-export-eu-top10-qtt.csv'
 IMP_EXP_DATASET_TOP10_VAL = 'fao-import-export-eu-top10-val.csv'
 
