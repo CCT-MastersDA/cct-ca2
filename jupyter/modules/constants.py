@@ -54,6 +54,11 @@ TWITTER_ENV_FILE = '.twitter_env'
 GRAPH_IMP_EXP_QTT = 'imp-exp-qtt-year.png'
 GRAPH_IMP_EXP_VAL = 'imp-exp-val-year.png'
 GRAPH_FOOD_PRICE_INF = 'food-price-inf-year.png'
+GRAPH_WORD_FREQ = 'tweets-word-freq.png'
+GRAPH_ACC_NAIVE_BAYES = 'tweets-acc-naive-bayes.png'
+GRAPH_IMP_EXP_SCALED = 'imp-exp-scaled.png'
+GRAPH_CONF_INTERVAL = 'org-farm-conf-interval.png'
+TWEETS_WORD_CLOUD = 'tweets-word-cloud.png'
 
 # ignore warnings
 warnings.filterwarnings('ignore')
