@@ -8,48 +8,55 @@ The folder structure is organized as follows:
 
 - jupyter
 
-  It contains all the Jupyter files, source code and the dashboard that were implemented.
+    It contains all the Jupyter files, source code and the dashboard that were implemented.
   
-  - datasets
+    - dashboard
 
-    It also contains the original datasets and the folder with the processed datasets after EDA.
+        It contains the previously extracted HTML dashboard.
+
+    - datasets
+
+        It contains the original datasets and the folder with the processed datasets after EDA.
     
-  - images
+    - images
 
-    It contains the images generated from the Jupyter notebooks.
+        It contains the images generated from the Jupyter notebooks.
     
-  - modules
+    - modules
 
-    It contains the following Python modules implemented specifically for this project:
+        It contains the following Python modules implemented specifically for this project:
 
-      - JSON Helper
-      - Twitter API
-      - Text Processor
+        - JSON Helper
+        - Twitter API
+        - Text Processor
   
-    All the dependencies are properly configured in the Jupyter notebooks.
+        All the dependencies are properly configured in the Jupyter notebooks.
 
 - project-mngmt
 
-  It contains the Excel file used to manage the tasks and requirements of the project.
+    It contains the Excel file used to manage the tasks and requirements of the project.
 
 - report
 
-  It contains the Word report.
+    It contains the Word report, cover sheet and images used.
   
-- dashboard
-
-  It contains the Jupyter notebook used to extract the dashboard and its already extracted HTML version.
 
 ## How to run the Statistical and ML models?
 
-DataPrepVis generates the processed datasets to be consumed by the other notebooks.
+DataPrepVis generates all the processed datasets that are consumed by the other notebooks.
 
-However, all files needed to run the Jupyter notebooks are already created, so the Jupyter files can be executed in any order.
+All dataset and image files required to run the Jupyter notebooks have already been created, so the Jupyter files can be executed in any order.
 
-In case any file is missing, the DataPrepVis Jupyter notebook should be executed first.
+In case any file is missing, the DataPrepVis Jupyter notebook should be executed first, then any other Jupyter file can be executed.
+
+Each Jupyter file has its own instructions with regards to dependencies or requirements.
 
 ## How to see the dashboard?
 
-The dashboard was already extracted using Voila tool. 
+The dashboard Jupyter file is DataPrepVisDashboard, which has been previously processed using Voila tool and the extracted HTLM version is available under the dashboard folder.
 
-So, under jupyter/dashboard folder, just click on the DataPrepVisDashBoard.html.
+The user can run the Jupyter extension or the command bellow on any Jupyter file in order to execute the Voila tool to extract the dashboard from scratch.
+
+```
+voila jupyter_file
+```
